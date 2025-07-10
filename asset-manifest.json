@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/amazon/static/css/main.9b6c8e3e.css",
+    "main.js": "/amazon/static/js/main.fd8a9650.js",
+    "static/js/453.8ab44547.chunk.js": "/amazon/static/js/453.8ab44547.chunk.js",
+    "static/media/Pizza-3007395.jpg": "/amazon/static/media/Pizza-3007395.3557979dca4bef982d8e.jpg",
+    "static/media/shop_image2.jpg": "/amazon/static/media/shop_image2.805985d22cb495a783b7.jpg",
+    "static/media/restaurant.avif": "/amazon/static/media/restaurant.40b08e37749be950ec03.avif",
+    "static/media/shop.jpg": "/amazon/static/media/shop.9bb233a0040319977993.jpg",
+    "static/media/shop_image4.jpg": "/amazon/static/media/shop_image4.8b4e3ca1f1290e908f47.jpg",
+    "static/media/Burger.jpg": "/amazon/static/media/Burger.76235328948782bb318d.jpg",
+    "static/media/shop_image3.jpg": "/amazon/static/media/shop_image3.dddf334fcb3e82ee61f0.jpg",
+    "static/media/shop_image1.jpg": "/amazon/static/media/shop_image1.d23ebca9359eda3f8b98.jpg",
+    "static/media/bills.jpg": "/amazon/static/media/bills.590f004cfcc0a2a1b9f0.jpg",
+    "index.html": "/amazon/index.html",
+    "main.9b6c8e3e.css.map": "/amazon/static/css/main.9b6c8e3e.css.map",
+    "main.fd8a9650.js.map": "/amazon/static/js/main.fd8a9650.js.map",
+    "453.8ab44547.chunk.js.map": "/amazon/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b6c8e3e.css",
+    "static/js/main.fd8a9650.js"
+  ]
+}

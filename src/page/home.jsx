@@ -2,14 +2,9 @@
 
 import { useContext, useEffect, useReducer, useState } from "react";
 import { ProductContext } from "../context/productContext";
-import { Link } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import { AuthContext } from "../context/authContext";
-import { Cart, AddToCart } from "./cart";
-import { Restaurant } from "./restaurant";
-import { Navbar } from "./Navbar";
+
 
 
 export const Home = () => {

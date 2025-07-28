@@ -5,70 +5,11 @@ import { faEnvelope, faHippo, faCartShopping, faDove, faMagnifyingGlass, faLocat
 import shop_image1  from '../images/shop_image1.jpg';
 import logo  from '../images/Burger.jpg';
 import { Link } from 'react-router-dom';
-import  '../styles/amazon.css';
 import { useState } from 'react';
+import { AmazonNav, Footer } from './Navbar';
+import { Dev, ScrollProduct } from './dev';
 
 
-
-export const AmazonNav = () => {
-    const [ popWindow, setWindow ] = useState(false);
-
-    return (
-        <div id='amazon-nav' >
-
-            <div className='flexbox' >
-                <FontAwesomeIcon icon={faDove} className='icon' />
-            </div>
-
-            <div className='flexbox' >
-                <FontAwesomeIcon icon={faLocationDot} className='icon' />
-                Deliver To <br/> Bangladesh
-            </div>
-
-            <div  id='midbar'>
-                <select >
-                    <option value="" > All </option>
-                    <option value="art" > Arts </option>
-                    <option value="film"> Film </option>
-                    <option value="Sport"> Sports </option>
-                </select>
-                <input placeholder='search me'></input>
-                <FontAwesomeIcon icon={faMagnifyingGlass} className='icon' />
-            </div>
-
-            <div className='flexbox' >
-                <select >
-                    <option value="english" > EN </option>
-                    <option value="art" > Arts </option>
-                    <option value="film"> Film </option>
-                    <option value="Sport"> Sports </option>
-
-                </select>
-            </div>
-
-            <div className='flex-column'
-            onMouseEnter={ () => setWindow(true) }
-            onMouseLeave={ () => setWindow(false) }
-            >
-                
-                
-                <div> Sign in or Accounts </div> 
-                { popWindow && <div id='sign-in-pop' 
-                onMouseEnter={ () => setWindow(true) } 
-                onMouseLeave={ () => setWindow(false) } 
-                >
-                    Hi I am here
-                </div> }    
-
-            </div>
-            
-            <div className='flexbox' >
-                <FontAwesomeIcon icon={faCartShopping} className='icon' />
-                Cart
-            </div>
-        </div>
-    )
-}
 
 const Card = (props) => {
 
@@ -159,10 +100,10 @@ export const OptionBar = (props) => {
 
     return (
         <div  id="optionbar" >
-            <div className='oplink'  > <Link onClick={ () => props.toggle() } > Home </Link>  </div>
-            <div className="oplink"  > <Link to='/product' > Product </Link> </div>
-            <div className="oplink"  > <Link to="/orders"> Orders </Link> </div>
-            <div className="oplink"  > <Link to="/style"> Style </Link> </div>
+            <Link className='oplink' onClick={ () => props.toggle() } > Home </Link>
+            <Link className="oplink" to='/product' > home2 </Link>
+            <Link className="oplink" to="/orders"> home3 </Link>
+            <Link className="oplink" to="/style"> home4 </Link>
         </div>
     )
 }
@@ -183,8 +124,7 @@ export const SlideProduct = () => {
     }
 
     return (
-        <div className="slide-product" >
-            <div id={ ids[index] } ></div>
+        <div className="slide-product" id={ ids[index] } >
 
             <button onClick={leftSlide} id="left-button" > &#8592; </button>
             <button onClick={rightSlide} id="right-button" > &#8594; </button>
@@ -195,282 +135,13 @@ export const SlideProduct = () => {
 
 
 
-export const Dev = () => {
-
-    return (
-        <div className='dev' >
-            <div className='dev-child'>
-                <h3> Toys </h3>
-                <div className='dev-row'>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-
-                <div className='dev-row' >
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        Shop 
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-                <h5> Explore More </h5>
-            </div>
-            
-            <div className='dev-child'>
-                <h3> Toys </h3>
-                <div className='dev-row'>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-
-                <div className='dev-row' >
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        Shop 
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-                <h5> Explore More </h5>
-            </div>
-
-            <div className='dev-child'>
-                <h3> Toys </h3>
-                <div className='dev-row'>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-
-                <div className='dev-row' >
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        Shop 
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-                <h5> Explore More </h5>
-            </div>
-
-            <div className='dev-child'>
-                <h3> Toys </h3>
-                <div className='dev-row'>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-
-                <div className='dev-row' >
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        Shop 
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-                <h5> Explore More </h5>
-            </div>
-
-            <div className='dev-child'>
-                <h3> Toys </h3>
-                <div className='dev-row'>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-
-                <div className='dev-row' >
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        Shop 
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-                <h5> Explore More </h5>
-            </div>
-
-            <div className='dev-child'>
-                <h3> Toys </h3>
-                <div className='dev-row'>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-
-                <div className='dev-row' >
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        Shop 
-                    </div>
-                    <div className='dev-column' >
-                        <img src={logo} className='toy-image' />
-                        <div> Shop </div>
-                    </div>
-                </div>
-                <h5> Explore More </h5>
-            </div>
-
-        </div>
-    )
-}
-
-
-export const SlideBar = () => {
-
-
-    return(
-        <div className='slide-bar' >
-            
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            <div> <img src={logo} className='pros' /> </div>
-            
-            
-        </div>
-    )
-}
 
 
 
-const Footer = () => {
 
 
-    return (
-        <div id='footer' >
-            <div id='back-to-top' >
-                Back to top
-            </div>
-
-            <div className='grid' >
-
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-
-            </div>
 
 
-            <div className='grid' >
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, 3r 23r3 223r 23r2 3r2r3 </div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, r23r r32r23r 3r23r2</div>
-            </div>
-
-            <div className='grid' id='last-grid' >
-                <div className='grid-child' > Lorem ipsum dolor, 3r32r23  3r 32r 32rr</div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, </div>
-            </div>
-
-        </div>
-    )
-}
 
 
 export const Amazon = () => {
@@ -481,15 +152,15 @@ export const Amazon = () => {
     }
 
     return (
-        <div className="style">
+        <div id="amazon101">
             
             <AmazonNav />
             <OptionBar toggle={toggleSlide} />
             <SlideProduct />
             <Dev />
-            <SlideBar />
+            <ScrollProduct />
             
-            { leftslideOn && <LeftSlide toggle={toggleSlide} /> }
+            
             <Footer /> 
             
         </div>

@@ -25,10 +25,7 @@ export const AmazonNav = () => {
                  <FontAwesomeIcon icon={faDove} className='icon' /> 
             </div>
 
-            <div className='nav-child' >
-                <FontAwesomeIcon icon={faLocationDot} className='icon' />
-                <div style={{ paddingLeft: '.3rem' }} > Deliver To <br/> Bangladesh </div> 
-            </div>
+            
 
             <div  id='midbar' className='nav-child' >
                 <select >
@@ -41,6 +38,11 @@ export const AmazonNav = () => {
                 <button onClick={() => alert('submitted')} >
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='icon' />
                 </button>
+            </div>
+
+            <div className='nav-child' >
+                <FontAwesomeIcon icon={faLocationDot} className='icon' />
+                <div style={{ paddingLeft: '.3rem' }} > Deliver To <br/> Bangladesh </div> 
             </div>
 
             <div className='nav-child' >
@@ -59,7 +61,7 @@ export const AmazonNav = () => {
             >
                 
                 
-                <div> Sign in or Accounts </div> 
+                <div> Sign in  </div> 
                 <div id='sign-in-pop' 
                 onMouseEnter={ () => setWindow(true) } 
                 onMouseLeave={ () => setWindow(false) } 

@@ -18,9 +18,11 @@ export const AmazonNav = () => {
 
     return (
         <div id='amazon-nav' >
+            
 
+            
             <div className='nav-child' >
-                <FontAwesomeIcon icon={faDove} className='icon' />
+                 <FontAwesomeIcon icon={faDove} className='icon' /> 
             </div>
 
             <div className='nav-child' >
@@ -36,7 +38,9 @@ export const AmazonNav = () => {
                     <option value="Sport"> Sports </option>
                 </select>
                 <input placeholder='search me'></input>
-                <FontAwesomeIcon icon={faMagnifyingGlass} className='icon' />
+                <button onClick={() => alert('submitted')} >
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='icon' />
+                </button>
             </div>
 
             <div className='nav-child' >
@@ -80,8 +84,8 @@ export const Footer = () => {
 
     return (
         <div id='footer' >
-            <div id='back-to-top'  >
-                <a href='#amazon-nav' style={{ color: 'white', textDecoration: 'none' }} >Back to top</a> 
+            <div id='back-to-top' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+                <a  href='#amazon-nav' style={{  color: 'white', textDecoration: 'none' }} >Back to top</a> 
             </div>
 
             <div className='footer' >
@@ -92,18 +96,23 @@ export const Footer = () => {
                 <div className='grid-child' > Lorem ipsum dolor, </div>
                 <div className='grid-child' > Lorem ipsum dolor, </div>
                 <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, 3r 23r3 223r 23r2 3r2r3 </div>
+                <div className='grid-child' > Lorem ipsum dolor,  </div>
                 <div className='grid-child' > Lorem ipsum dolor, </div>
                 <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div className='grid-child' > Lorem ipsum dolor, r23r r32r23r 3r23r2</div>
+                <div className='grid-child' > Lorem ipsum dolor, </div>
+                <div className='grid-child' > Lorem ipsum dolor, </div>
+                <div className='grid-child' > Lorem ipsum dolor,  </div>
+                <div className='grid-child' > Lorem ipsum dolor, </div>
+                <div className='grid-child' > Lorem ipsum dolor, kjgk dofdof odkfodk </div>
+                <div className='grid-child' > Lorem ipsum dolor, </div>
             </div>
 
-            <div style={{ color: 'white', backgroundColor: 'var(--color1)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)' }} >
-                <div></div>
-                <div className='grid-child' > Lorem ipsum dolor, 3r32r23  3r 32r 32rr</div>
+            <div className='footer-pro' >
+                <div className='footer-extra' ></div>
                 <div className='grid-child' > Lorem ipsum dolor, </div>
                 <div className='grid-child' > Lorem ipsum dolor, </div>
-                <div></div>
+                <div className='grid-child' > Lorem ipsum dolor, </div>
+                <div className='footer-extra' ></div>
             </div>
 
         </div>

@@ -10,7 +10,7 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 :root {
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-	min-width: 1000px;
+	width: 100%;
 	height: 100vh;
 }
 
@@ -34,12 +34,11 @@ body {
 	display: flex;
 	background-color: var(--color1);
 	color: var(--color4);
-	height: 3rem;
 	justify-content: space-evenly;
 	align-items: center;
-	gap: 1rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	gap: .5rem;
+	padding: .5rem;
+	flex-wrap: wrap;
 }
 
 #amazon-nav #midbar {
@@ -47,31 +46,33 @@ body {
 }
 
 #amazon-nav #midbar input {
-	flex-grow: 1;
 	height: 100%;
+	
+	flex-grow: 1;
 	padding-left: .5rem;
 }
 
 
 #amazon-nav #midbar select {
 	height: 100%;
+	
 }
 
-
-#amazon-nav #midbar svg {
-	padding: .5rem;
+#amazon-nav #midbar button {
+	height: 100%;
 	background-color: rgb(193, 146, 16);
+	width: 2rem;
+	
 }
 
 
 .nav-child {
 	border: 1px solid var(--color1);
-	height: 100%;
+	height: 2.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: .5rem;
-	
+	padding: .2rem;
 }
 
 
@@ -90,7 +91,7 @@ body {
 	display: none;
 	position: absolute;
 	z-index: 5;
-	top: 2.9rem;
+	top: 2.5rem;
 	width: 10rem;
 	height: 20rem;
 	background-color: var(--color4);
@@ -102,6 +103,7 @@ body {
 #optionbar {
 	background-color: var(--color2);
 	display: flex;
+	overflow-x: auto;
 	height: 2rem;
 	gap: .5rem;
 	align-items: center;
@@ -128,6 +130,7 @@ body {
 	position: relative;
 	height: 15rem;
 	background-size: cover;
+	background-position: top;
 }
 
 #img1 {
@@ -238,21 +241,68 @@ body {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: (2, 1fr);
-	height: 10rem;
+	gap: 1rem;
 	color: var(--color4);
+	padding: 1rem;
 }
 
-/****************** Small  ******************************/
+.footer-pro {
+	color: white; 
+	background-color: var(--color1); 
+	display: grid; 
+	grid-template-columns:  repeat(5, 1fr);
+	padding-left: 1rem;
+	padding-right: 1rem;
+	gap: 1rem;
+}
 
-@media   (max-width: 999px) {
-	body {
-		min-width: 100%;
-	}
+.footer-extra {
+	display: block;
+}
 
+/******************  tablet  ******************************/
+
+@media screen and (max-width: 1000px) and (min-width: 500px) {
 	html {
-		font-size: 2vw;
+		font-size: 15px;
 	}
+
+	.dev {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		height: 40rem;
+	}
+
+
 }
 
+
+/*******************  mobile ******************************/
+
+@media screen and ( max-width: 500px ) {
+	html {
+		font-size: 12px;
+	}
+
+	
+	.dev {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		height: 120rem;
+	}
+
+	.footer {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.footer-pro {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+		
+	.footer-extra {
+		display: none;
+	}
+}
 
 

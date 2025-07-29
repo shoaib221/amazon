@@ -104,6 +104,12 @@ export const OptionBar = (props) => {
             <Link className="oplink" to='/product' > home2 </Link>
             <Link className="oplink" to="/orders"> home3 </Link>
             <Link className="oplink" to="/style"> home4 </Link>
+            <Link className="oplink" to='/product' > home2 </Link>
+            <Link className="oplink" to="/orders"> home3 </Link>
+            <Link className="oplink" to="/style"> home4 </Link>
+            <Link className="oplink" to='/product' > home2 </Link>
+            <Link className="oplink" to="/orders"> home3 </Link>
+            <Link className="oplink" to="/style"> home4 </Link>
         </div>
     )
 }

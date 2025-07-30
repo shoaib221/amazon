@@ -12,8 +12,9 @@ export const AmazonNav = () => {
     
     function setWindow (val) {
         let elem = document.getElementById('sign-in-pop')
-        if( val ) elem.style.display='block'
-        else elem.style.display='none'
+        let elem2 = document.getElementById('black-body')
+        if( val ) {elem.style.display='block'; elem2.style.display='block'}
+        else {elem.style.display='none'; elem2.style.display='none'}
     }
 
     return (
@@ -62,7 +63,7 @@ export const AmazonNav = () => {
                 
                 
                 <div> Sign in  </div> 
-                <div id='sign-in-pop' 
+                <div id='sign-in-pop' style={{ height: '50vh', width: 'min(25rem, 50vw)', right: '0vw' }}
                 onMouseEnter={ () => setWindow(true) } 
                 onMouseLeave={ () => setWindow(false) } 
                 >

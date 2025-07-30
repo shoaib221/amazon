@@ -23,12 +23,29 @@ html {
 body {
 	width: 100%;
 	height: 100vh;
+	min-width: 250px;
+	max-width: 1800px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #amazon101 {
 	width: 100%;
 	height: 100%;
 }
+
+.links {
+	padding: .5rem;
+	margin: .5rem;
+}
+
+.links:hover {
+	background-color: rgb(210, 211, 212);
+	cursor: pointer;
+	
+}
+
+/* ######################## nav ##################################################### */
 
 #amazon-nav {
 	display: flex;
@@ -43,6 +60,9 @@ body {
 
 #amazon-nav #midbar {
 	flex-grow: 1;
+	max-width: 100%;
+	display: flex;
+	overflow: hidden;
 }
 
 #amazon-nav #midbar input {
@@ -82,7 +102,7 @@ body {
 
 
 #sign-in {
-	flex-direction: column;
+	
 	position: relative;
 }
 
@@ -99,15 +119,65 @@ body {
 	color: black;
 }
 
+/* ###################################### option bar ############################### */
 
 #optionbar {
-	background-color: var(--color2);
 	display: flex;
-	overflow-x: auto;
-	height: 2rem;
-	gap: .5rem;
+	background-color: var(--color2);
+	color: var(--color4);
+	height: 2.5rem;
+	position: relative;
+	overflow: auto;
 	align-items: center;
-	padding: 1rem;
+
+}
+
+@keyframes anim1 {
+	from { transform: translateX(-30rem); }
+	to { transform: translateX(0); }
+}
+
+@keyframes anim2 {
+	from { transform: translateX(0); }
+	to { transform: translateX(-30rem); }
+}
+
+@keyframes left-swap {
+	from { transform: translateX(0%); }
+	to { transform: translateX(-50%); }
+}
+
+@keyframes right-swap {
+	from { transform: translateX(-50%); }
+	to { transform: translateX(0%); }
+}
+
+h2 {
+	color: black;
+}
+
+#slidein {
+	position: relative;
+	animation: anim1 0.3s  forwards;
+	width: 30rem
+	
+}
+
+#left-slide {
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-color: rgb( 0, 0, 0, .5 );
+	width: 100vw;
+	height: 100vh;
+	display: none;
+
+}
+
+#left-swap .links:hover {
+	background-color: rgb(220, 221, 222);
 }
 
 .oplink {
@@ -126,12 +196,16 @@ body {
 	border: 1px solid var(--color4);
 }
 
+/* ################################  slide product ################################# */
+
 .slide-product {
 	position: relative;
 	height: 15rem;
 	background-size: cover;
 	background-position: top;
 }
+
+
 
 #img1 {
 	background-image: url(../images/shop_image1.jpg);
@@ -167,20 +241,25 @@ body {
 	background-color: rgb(255, 255, 255, .5);
 }
 
+/* ########################################  Dev  ####################################### */
+
 .dev {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	height: 30rem;
-	gap: 1rem;
+	height: 40rem;
+	gap: .5rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	padding-left: .5rem;
+	padding-right: .5rem;
 }
 
 .dev-child {
 	display: flex;
 	flex-direction: column;
 	padding: .5rem;
+	box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.25), 3px 3px 3px 3px rgb(0, 0, 0, 0.2);
 }
 
 .dev-grand-child {
@@ -214,6 +293,8 @@ body {
 	background-size: cover;
 }
 
+/* #######################################  scroll product ############################# */
+
 .scroll-product {
 	height: 14rem;
 	
@@ -229,7 +310,16 @@ body {
 	min-width: 12rem;
 	background-image: url(../images/scroll-child-1.jpg);
 	background-size: cover;
+	margin-right: .5rem;
 }
+
+.scroll-child:hover {
+	background-color: rgb(218, 215, 215);
+	cursor: pointer;
+}
+
+
+/* #################################   footer  ########################################## */
 
 #back-to-top {
 	background-color: var(--color2);
@@ -270,7 +360,12 @@ body {
 	.dev {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 1fr);
-		height: 40rem;
+		height: 60rem;
+		
+	}
+
+	#slidein {
+		width: 20rem;
 	}
 
 
@@ -302,6 +397,24 @@ body {
 		
 	.footer-extra {
 		display: none;
+	}
+
+	#slidein {
+		width: 18rem;
+	}
+
+
+}
+
+@media  screen and (max-width: 299px) {
+	#amazon-nav #midbar input {
+		max-width: 60%;
+	}
+	#amazon-nav #midbar select {
+		width: 20%;
+	}
+	#amazon-nav #midbar button {
+		width: 20%;
 	}
 }
 

@@ -84,11 +84,17 @@ export const AmazonNav = () => {
 
 export const Footer = () => {
 
+    const aha = () => {
+        let elem = document.getElementById( 'amazon-nav' )
+        elem.scrollIntoView( {
+            behavior: 'smooth'
+        } )
+    }
 
     return (
         <div id='footer' >
-            <div id='back-to-top' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                <a  href='#amazon-nav' style={{  color: 'white', textDecoration: 'none' }} >Back to top</a> 
+            <div onClick={ aha } id='back-to-top' style={{ color: 'white', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+                Back to top 
             </div>
 
             <div className='footer' >
